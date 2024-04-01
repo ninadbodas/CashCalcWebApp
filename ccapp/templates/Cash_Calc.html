@@ -1,0 +1,151 @@
+<html>	<head>		<title>Cash Denominations</title>
+	<style>
+	table, th, td {
+		border: 0.5px solid black;
+		border-collapse: collapse;
+		width=5px;          }
+
+	 th1, td1 {
+		 padding: 3px;
+		 text-align: left;          }
+	 </style>
+	 <script>
+	 	calc_2000 = function(){var r2000 = document.getElementById('r2000').value; var Cnt2000 = document.getElementById('Cnt2000').value;
+			document.getElementById('Out2000').value = parseInt(r2000)*parseInt(Cnt2000);}
+		calc_1000 = function(){ var r1000 = document.getElementById('r1000').value; var Cnt1000 = document.getElementById('Cnt1000').value;
+			document.getElementById('Out1000').value = parseInt(r1000)*parseInt(Cnt1000);}
+		calc_500 = function(){ var r500 = document.getElementById('r500').value; var Cnt500 = document.getElementById('Cnt500').value;
+			document.getElementById('Out500').value = parseInt(r500)*parseInt(Cnt500);}
+		calc_200 = function(){ var r200 = document.getElementById('r200').value; var Cnt200 = document.getElementById('Cnt200').value;
+			document.getElementById('Out200').value = parseInt(r200)*parseInt(Cnt200);}
+		calc_100 = function(){ var r100 = document.getElementById('r100').value; var Cnt100 = document.getElementById('Cnt100').value;
+			document.getElementById('Out100').value = parseInt(r100)*parseInt(Cnt100);}
+		calc_50 = function(){ var r50 = document.getElementById('r50').value; var Cnt50 = document.getElementById('Cnt50').value;
+			document.getElementById('Out50').value = parseInt(r50)*parseInt(Cnt50);}
+		calc_20 = function(){ var r20 = document.getElementById('r20').value; var Cnt20 = document.getElementById('Cnt20').value;
+			document.getElementById('Out20').value = parseInt(r20)*parseInt(Cnt20); }
+		calc_10 = function(){ var r10 = document.getElementById('r10').value; var Cnt10 = document.getElementById('Cnt10').value;
+			document.getElementById('Out10').value = parseInt(r10)*parseInt(Cnt10);}
+		calc_5 = function(){ var r5 = document.getElementById('r5').value; var Cnt5 = document.getElementById('Cnt5').value;
+			document.getElementById('Out5').value = parseInt(r5)*parseInt(Cnt5); }
+		calc_2 = function(){ var r2 = document.getElementById('r2').value; var Cnt2 = document.getElementById('Cnt2').value;
+			document.getElementById('Out2').value = parseInt(r2)*parseInt(Cnt2);}
+		calc_1 = function(){ var r1 = document.getElementById('r1').value; var Cnt1 = document.getElementById('Cnt1').value;
+			document.getElementById('Out1').value = parseInt(r1)*parseInt(Cnt1);}
+			GrandTotal = function(){
+				var Out2000 = document.getElementById('Out2000').value;
+				var Out1000 = document.getElementById('Out1000').value;
+				var Out500 = document.getElementById('Out500').value;
+				var Out200 = document.getElementById('Out200').value;
+				var Out100 = document.getElementById('Out100').value;
+				var Out50 = document.getElementById('Out50').value;
+				var Out20 = document.getElementById('Out20').value;
+				var Out10 = document.getElementById('Out10').value;
+				var Out5 = document.getElementById('Out5').value;
+				var Out2 = document.getElementById('Out2').value;
+				var Out1 = document.getElementById('Out1').value;
+				document.getElementById('GT').value = parseInt(Out2000)+parseInt(Out1000)+parseInt(Out500)+parseInt(Out200)+parseInt(Out100)
+									+parseInt(Out50)+parseInt(Out20)+parseInt(Out10)
+									+parseInt(Out5)+parseInt(Out2)+parseInt(Out1);   			}
+
+		calc_diff = function()
+			{
+				vGrandTotal = document.getElementById('GT').value;
+				vCashRec = document.getElementById('CashRec').value;
+				vCashMore = "Cash in Hand > App";
+				vAppMore = "Cash in Hand < App";
+				vSame = "Cash in Hand = App";
+
+				vCashDiff = parseInt(vGrandTotal) - parseInt(vCashRec);
+				document.getElementById('CashDiff').innerHTML =	vCashDiff;
+
+				if (parseInt(vCashDiff) > 0)
+				{
+					document.getElementById('vCashMore').innerHTML = vCashMore;
+				}
+				if (parseInt(vCashDiff) < 0) {
+					document.getElementById('vAppMore').innerHTML = vAppMore;
+				}
+				if (parseInt(vCashDiff) = 0)
+				{
+					document.getElementById('vSame').innerHTML = vSame;
+				}
+			}
+  </script>
+	</head>
+	<body>
+		<br>
+		<table>
+			<tr>
+				<th>Denomination</th>
+				<th>Count</th>
+				<th>Amount</th>
+			</tr>
+			<tr>
+				<th><input id="r2000" style="font-size:15px;" value="2000" readonly> </th>
+				<th><input id="Cnt2000" type="text" onblur="calc_2000()" value="0"> </th>
+				<th><input id="Out2000" style="font-size:15px;" onblur="GrandTotal()" value="0"> </th>
+			</tr>
+			<tr>
+				<th><input id="r1000" style="font-size:15px;" value="1000" readonly> </th>
+				<th><input id="Cnt1000" type="text" onblur="calc_1000()" value="0"> </th>
+				<th><input id="Out1000" style="font-size:15px;" onblur="GrandTotal()" value="0"> </th>
+			</tr>
+			<tr>
+				<th><input id="r500" style="font-size:15px;" value="500" readonly></th>
+				<th><input id="Cnt500" type="text" onblur="calc_500()" value="0"></th>
+				<th><input id="Out500" style="font-size:15px;" onblur="GrandTotal()" value="0"></th>
+			</tr>
+			<tr>
+				<th><input id="r200" style="font-size:15px;" value="200" readonly></th>
+				<th><input id="Cnt200" type="text" onblur="calc_200()" value="0"></th>
+				<th><input id="Out200" style="font-size:15px;" onblur="GrandTotal()" value="0"></th>
+			</tr>
+			<tr>
+				<th><input id="r100" style="font-size:15px;" value="100" readonly></th>
+				<th><input id="Cnt100" type="text" onblur="calc_100()" value="0"></th>
+				<th><input id="Out100" style="font-size:15px;" onblur="GrandTotal()" value="0"></th>
+			</tr>
+			<tr>
+				<th><input id="r50" style="font-size:15px;" value="50" readonly></th>
+				<th><input id="Cnt50" type="text" onblur="calc_50()" value="0"></th>
+				<th><input id="Out50" style="font-size:15px;" onblur="GrandTotal()" value="0"></th>
+			</tr>
+			<tr>
+				<th><input id="r20" style="font-size:15px;" value="20" readonly></th>
+				<th><input id="Cnt20" type="text" onblur="calc_20()"value="0"></th>
+				<th><input id="Out20" style="font-size:15px;" onblur="GrandTotal()" value="0"></th>
+			</tr>
+			<tr>
+				<th><input id="r10" style="font-size:15px;" value="10" readonly></th>
+				<th><input id="Cnt10" type="text" onblur="calc_10()" value="0"></th>
+				<th><input id="Out10" style="font-size:15px;" onblur="GrandTotal()" value="0"></th>
+			</tr>
+			<tr>
+				<th><input id="r5" style="font-size:15px;" value="5" readonly></th>
+				<th><input id="Cnt5" type="text" onblur="calc_5()" value="0"></th>
+				<th><input id="Out5" style="font-size:15px;" onblur="GrandTotal()" value="0"></th>
+			</tr>
+			<tr>
+				<th><input id="r2" style="font-size:15px;" value="2" readonly></th>
+				<th><input id="Cnt2" type="text" onblur="calc_2()" value="0"></th>
+				<th><input id="Out2" style="font-size:15px;" onblur="GrandTotal()" value="0"></th>
+			</tr>
+			<tr>
+				<th><input id="r1" style="font-size:15px;" value="1" readonly></th>
+				<th><input id="Cnt1" type="text" onblur="calc_1()" value="0"></th>
+				<th><input id="Out1" style="font-size:15px;" onblur="GrandTotal()" value="0"></th>
+			</tr>
+			<tr>
+				<th></th>
+				<th><b>Total - Cash</b></th>
+				<th><input id="GT" style="font-size:15px;" value="0" readonly></th>
+			</tr>
+		</table>
+		<br>
+		<h3>Cash recorded in App = Rs. <input id="CashRec" style="font-size:15px;" onblur="calc_diff()" value="0"></h3>
+		<h2><span id="CashDiff"></span></h2>
+		<h2><span id="vCashMore"></span></h2>
+		<h2><span id="vAppMore"></span></h2>
+		<h2><span id="vSame"></span></h2>
+		<h><b><font size=5px></font></b></h>	</body></html>
