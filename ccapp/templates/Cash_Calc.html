@@ -1,36 +1,64 @@
-<html>	<head>		<title>Cash Denominations</title>
+<html>
+	<head>
+		<title>Cash Denominations</title>
 	<style>
 	table, th, td {
 		border: 0.5px solid black;
 		border-collapse: collapse;
-		width=5px;          }
+		width=5px;
+          }
 
 	 th1, td1 {
 		 padding: 3px;
-		 text-align: left;          }
+		 text-align: left;
+          }
+
 	 </style>
 	 <script>
-	 	calc_2000 = function(){var r2000 = document.getElementById('r2000').value; var Cnt2000 = document.getElementById('Cnt2000').value;
+	 	calc_2000 = function()
+{
+var r2000 = document.getElementById('r2000').value;
+ var Cnt2000 = document.getElementById('Cnt2000').value;
 			document.getElementById('Out2000').value = parseInt(r2000)*parseInt(Cnt2000);}
-		calc_1000 = function(){ var r1000 = document.getElementById('r1000').value; var Cnt1000 = document.getElementById('Cnt1000').value;
+		calc_1000 = function()
+{ var r1000 = document.getElementById('r1000').value; var Cnt1000 = document.getElementById('Cnt1000').value;
 			document.getElementById('Out1000').value = parseInt(r1000)*parseInt(Cnt1000);}
-		calc_500 = function(){ var r500 = document.getElementById('r500').value; var Cnt500 = document.getElementById('Cnt500').value;
-			document.getElementById('Out500').value = parseInt(r500)*parseInt(Cnt500);}
-		calc_200 = function(){ var r200 = document.getElementById('r200').value; var Cnt200 = document.getElementById('Cnt200').value;
-			document.getElementById('Out200').value = parseInt(r200)*parseInt(Cnt200);}
-		calc_100 = function(){ var r100 = document.getElementById('r100').value; var Cnt100 = document.getElementById('Cnt100').value;
-			document.getElementById('Out100').value = parseInt(r100)*parseInt(Cnt100);}
-		calc_50 = function(){ var r50 = document.getElementById('r50').value; var Cnt50 = document.getElementById('Cnt50').value;
-			document.getElementById('Out50').value = parseInt(r50)*parseInt(Cnt50);}
-		calc_20 = function(){ var r20 = document.getElementById('r20').value; var Cnt20 = document.getElementById('Cnt20').value;
+		calc_500 = function()
+{ var r500 = document.getElementById('r500').value;
+ var Cnt500 = document.getElementById('Cnt500').value;
+			document.getElementById('Out500').value = parseInt(r500)*parseInt(Cnt500);
+}
+		calc_200 = function()
+{ var r200 = document.getElementById('r200').value; var Cnt200 = document.getElementById('Cnt200').value;
+			document.getElementById('Out200').value = parseInt(r200)*parseInt(Cnt200);
+}
+		calc_100 = function(){ var r100 = document.getElementById('r100').value;
+ var Cnt100 = document.getElementById('Cnt100').value;
+			document.getElementById('Out100').value = parseInt(r100)*parseInt(Cnt100);
+}
+		calc_50 = function()
+{ var r50 = document.getElementById('r50').value;
+ var Cnt50 = document.getElementById('Cnt50').value;
+			document.getElementById('Out50').value = parseInt(r50)*parseInt(Cnt50);
+}
+		calc_20 = function()
+{ var r20 = document.getElementById('r20').value;
+ var Cnt20 = document.getElementById('Cnt20').value;
 			document.getElementById('Out20').value = parseInt(r20)*parseInt(Cnt20); }
-		calc_10 = function(){ var r10 = document.getElementById('r10').value; var Cnt10 = document.getElementById('Cnt10').value;
-			document.getElementById('Out10').value = parseInt(r10)*parseInt(Cnt10);}
-		calc_5 = function(){ var r5 = document.getElementById('r5').value; var Cnt5 = document.getElementById('Cnt5').value;
-			document.getElementById('Out5').value = parseInt(r5)*parseInt(Cnt5); }
+		calc_10 = function(){ var r10 = document.getElementById('r10').value;
+ var Cnt10 = document.getElementById('Cnt10').value;
+			document.getElementById('Out10').value = parseInt(r10)*parseInt(Cnt10);
+}
+		calc_5 = function()
+{ var r5 = document.getElementById('r5').value;
+ var Cnt5 = document.getElementById('Cnt5').value;
+			document.getElementById('Out5').value = parseInt(r5)*parseInt(Cnt5);
+ }
 		calc_2 = function(){ var r2 = document.getElementById('r2').value; var Cnt2 = document.getElementById('Cnt2').value;
 			document.getElementById('Out2').value = parseInt(r2)*parseInt(Cnt2);}
-		calc_1 = function(){ var r1 = document.getElementById('r1').value; var Cnt1 = document.getElementById('Cnt1').value;
+		calc_1 = function()
+{ var r1 = document.getElementById('r1').value;
+ var Cnt1 = document.getElementById('Cnt1').value;
 			document.getElementById('Out1').value = parseInt(r1)*parseInt(Cnt1);}
 			GrandTotal = function(){
 				var Out2000 = document.getElementById('Out2000').value;
@@ -46,7 +74,8 @@
 				var Out1 = document.getElementById('Out1').value;
 				document.getElementById('GT').value = parseInt(Out2000)+parseInt(Out1000)+parseInt(Out500)+parseInt(Out200)+parseInt(Out100)
 									+parseInt(Out50)+parseInt(Out20)+parseInt(Out10)
-									+parseInt(Out5)+parseInt(Out2)+parseInt(Out1);   			}
+									+parseInt(Out5)+parseInt(Out2)+parseInt(Out1);
+   			}
 
 		calc_diff = function()
 			{
@@ -71,9 +100,12 @@
 					document.getElementById('vSame').innerHTML = vSame;
 				}
 			}
-  </script>
+
+  </script>
 	</head>
 	<body>
+		<h2>Cash Denominations</h2>
+		<h3><i>Calculate cash in your hand</i></h3>
 		<br>
 		<table>
 			<tr>
@@ -148,4 +180,7 @@
 		<h2><span id="vCashMore"></span></h2>
 		<h2><span id="vAppMore"></span></h2>
 		<h2><span id="vSame"></span></h2>
-		<h><b><font size=5px></font></b></h>	</body></html>
+		<h><b><font size=5px></font></b></h>
+	</body>
+</html>
+
