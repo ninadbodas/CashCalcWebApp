@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-d&3!%z7m$r313#zh-$ed99%%ay2yn3ud))!x(n&348afk%gfom
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'cashcalc.azurewebsites.net',
+    '127.0.0.1'
+]
 
 
 # Application definition
